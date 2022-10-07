@@ -5,10 +5,17 @@ const VideoDetail = ({ video }) => {
     return <div>Loading...</div>;
   }
 
+  const embLink = `https://www.youtube.com/embed/${video.id.videoId}`
+
   return (
-    <div className="ui segment">
-      <h4 className="header">{video.snippet.title}</h4>
-      <p className="description">{video.snippet.description}</p>
+    <div>
+        <div className="ui embed">
+            <iframe src={embLink} />
+        </div>
+      <div className="ui segment">
+        <h4 className="header">{video.snippet.title}</h4>
+        <p className="description">{video.snippet.description}</p>
+      </div>
     </div>
   );
 };
