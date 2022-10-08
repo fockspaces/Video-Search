@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import youtube from "../apis/youtube";
 
-const useVideos = (defaultSearchTerm) => {
+const useVideos = (defaultSearchTerm)=> {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
