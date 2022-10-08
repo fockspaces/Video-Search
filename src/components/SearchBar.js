@@ -13,16 +13,22 @@ const SearchBar = ({ onTermSubmit }) => {
   return (
     <div className="search-bar ui segment">
       <form className="ui form" onSubmit={onFormSubmit}>
-        <div className="field">
-          <label>video search</label>
-          <input
-            placeholder="search video..."
-            type="text"
-            value={term}
-            onChange={(e) => {
-              setTerm(e.target.value);
-            }}
-          />
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="one wide column">
+              <i className="red users big code icon caret square right icon"></i>
+            </div>
+            <div className="field ten wide column">
+              <input
+                placeholder="search video..."
+                type="text"
+                value={term}
+                onChange={(e) => {
+                  setTerm(e.target.value);
+                }}
+              />
+            </div>
+          </div>
         </div>
       </form>
     </div>
